@@ -10,6 +10,7 @@ public class Livros {
 	int id;
 	
 	
+	
 	public Livros (String nome, String genero, String autor, int paginas, int ano, int id)
 	{
 		this.nome = nome; 
@@ -18,7 +19,10 @@ public class Livros {
 		this.paginas = paginas; 
 		this.ano = ano; 
 		this.id = id;
+	
 		
 		
-	}
+		
+	 }
+
 }
