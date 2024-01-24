@@ -11,7 +11,7 @@ public class Megasena {
 
         int tamanhoDoVetor = 7;
 
-        // vetor que armazena os números escolhidos pelo usuário
+        // vetor que armazena os números escolhidos pelo usuário aaaa
         int[] numerosEscolhidos = new int[tamanhoDoVetor];
 
         // solicita ao usuário que escolha 7 números
