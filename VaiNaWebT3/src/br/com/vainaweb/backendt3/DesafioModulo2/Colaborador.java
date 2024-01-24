@@ -1,4 +1,4 @@
-package br.com.vainaweb.backendt3.classeabstrata;
+package br.com.vainaweb.backendt3.DesafioModulo2;
 
 import java.util.Scanner;
 
