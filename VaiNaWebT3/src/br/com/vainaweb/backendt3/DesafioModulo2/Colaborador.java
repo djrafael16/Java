@@ -61,6 +61,7 @@ public abstract class Colaborador {
 	}
 	
 	public abstract void aumentarSalario();
+	public abstract void contribuiçãoInss();
 	
 	public void demitir() {
 		Scanner sc = new Scanner(System.in);
