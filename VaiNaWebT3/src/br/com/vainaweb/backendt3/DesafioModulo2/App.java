@@ -11,13 +11,14 @@ public class App {
 		Colaborador designerJunior = new Designer("Klayvem", "4563-6", 12000.0);
 		Colaborador techLead = new TechLeader("João Pedro Belo", "222.356.790.23", 25000.0);
 		 
-		  try (Scanner op = new Scanner(System.in)) {
+		    Scanner op = new Scanner(System.in);
 			System.out.println("Escolha uma opçao \n"
 			  		+ "1 - Visualizar Funcionarios\n"
 			  		+ "2 - Visualiar Funcionario com aumento\n"
 			  		+ "3 - Contribuição INSS\n"
 			  		+ "4 - Saldo do FGTS \n"
 			  		+ "5 - Demitir ");
+			
 			  int n = op.nextInt();
 			  
 			  switch(n) {
@@ -63,4 +64,4 @@ public class App {
 	
 	}
 
-}
+
