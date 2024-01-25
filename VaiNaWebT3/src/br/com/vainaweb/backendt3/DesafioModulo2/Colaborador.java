@@ -1,6 +1,6 @@
 package br.com.vainaweb.backendt3.DesafioModulo2;
 
-import java.util.Scanner;
+
 
 public abstract class Colaborador {
 
@@ -9,17 +9,19 @@ public abstract class Colaborador {
 	private double salario;
 	private boolean isAtivo = true;
 	private double fgts;
+	private int tempo;
 	
 	// Construtores
 	public Colaborador() {
 
 	}
 
-	public Colaborador(String nome, String cpf, double salario) {
+	public Colaborador(String nome, String cpf, double salario, int tempo) {
 		this.nome = nome;
 		this.cpf = cpf;
 		this.salario = salario;
 		this.fgts =  salario * 0.08;
+		this.tempo = tempo;
 	}
 
 	// Getters e Setters
@@ -64,20 +66,36 @@ public abstract class Colaborador {
 		this.isAtivo = isAtivo;
 	}
 	
+	public int getTempo() {
+		return tempo;
+	}
+
+	public void setTempo(int tempo) {
+		this.tempo = tempo;
+	}
+	
 	// Métodos
 
 	public String visualizar() {
 		return "[Colaborador " + this.nome + ", do CPF: " + this.cpf + " ]" + "\nSalario: " + this.salario
-				+"\n FGTS: " + this.fgts
+				+"\n FGTS: " + this.fgts 
+				+"\n Tempo de contrato: " + this.tempo +" meses"
 				+ "\nStatus: " + (this.isAtivo? "Vinculado" : "Sem vinculo");
 	}
 	
 	public abstract void aumentarSalario();
 	
+	public abstract void ferias();
+	
 	public void fgtsNovacontribuicao()
 	{
 		setFgts(getFgts() + getSalario()* 0.08);
-		}
+		}  
+	
 
-	}
+    
+    
+    }
+    
+    
 
