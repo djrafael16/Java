@@ -38,6 +38,18 @@ public class App {
 					
 			  case 2: 		
 				    
+				     devBackEndJunior.aumentarSalario();
+					 devFrontEndJunior.aumentarSalario();
+					 designerJunior.aumentarSalario();
+					 techLead.aumentarSalario();
+				     devFrontEndJunior.aumentarSalario();
+				     
+				     devBackEndJunior.fgtsNovacontribuicao();
+				     devFrontEndJunior.fgtsNovacontribuicao();
+					 designerJunior.fgtsNovacontribuicao();
+					 techLead.fgtsNovacontribuicao();
+				     devFrontEndJunior.fgtsNovacontribuicao();
+				     
 					System.out.println("-----------Depois------------------");
 					System.out.println(devBackEndJunior.visualizar());
 					System.out.println("----------------------------------");
@@ -46,22 +58,22 @@ public class App {
 					System.out.println(designerJunior.visualizar());
 					System.out.println("----------------------------------");
 					System.out.println(techLead.visualizar());
-					 devBackEndJunior.aumentarSalario();
-					 devFrontEndJunior.aumentarSalario();
-					 designerJunior.aumentarSalario();
-					 techLead.aumentarSalario();
-				     devFrontEndJunior.aumentarSalario();
+					
 					break;
 				
 			  case 3:
 				  break;
+				  
+			  case 4:
+				  break;
+			  
 				  
 			  default:
 			   System.out.println(" Você fechou sua analise ");  
 			  
 			  }
 		}	
-	
+
 	}
 
 

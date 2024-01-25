@@ -17,6 +17,7 @@ public class Designer extends Colaborador{
 	@Override
 	public void aumentarSalario() {
 		setSalario(getSalario() * 1.20);
+		
 	}
 
 }

@@ -14,5 +14,5 @@ public class DevBackEnd extends Colaborador {
 	public void aumentarSalario() {
 		setSalario(getSalario() * 1.2);
 	}
-
+	
 }
