@@ -9,7 +9,7 @@ public class App {
 		Colaborador devBackEndJunior = new DevBackEnd("Felpudo", "1234-0", 10000.0, 13, " Java", " O+");
 		Colaborador devFrontEndJunior = new DevFrontEnd("Luccas", "9875-9", 10000.0, 24, " CSS", " O-");
 		Colaborador designerJunior = new Designer("Klayvem", "4563-6", 12000.0, 28, " Blender", " AB");
-		Colaborador techLead = new TechLeader("João Pedro Belo", "222.356.790.23", 25000.0, 6, " Java - CSS", " AB");
+		Colaborador techLead = new TechLeader("João Pedro Belo", "222.356.790.23", 25000.0, 6," AB");
 		 
 		    Scanner op = new Scanner(System.in);
 			System.out.println("Escolha uma opçao \n"

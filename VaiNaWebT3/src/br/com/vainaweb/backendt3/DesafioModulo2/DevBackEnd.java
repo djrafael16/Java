@@ -2,17 +2,17 @@ package br.com.vainaweb.backendt3.DesafioModulo2;
 
 public class DevBackEnd extends Colaborador {
 
-	private String stackDesigner; 
+	private String stack; 
 	private String sanguineo; 
 	
 	public DevBackEnd() {
 		super();
 	}
 
-	public DevBackEnd(String nome, String cpf, double salario, int tempo, String stackDesigner, String sanguineo) {
+	public DevBackEnd(String nome, String cpf, double salario, int tempo, String stack, String sanguineo) {
 		super(nome, cpf, salario, tempo);
 		this.sanguineo = sanguineo;
-		this.stackDesigner = stackDesigner;
+		this.stack = stack;
 		
 	}
 
@@ -42,7 +42,7 @@ public class DevBackEnd extends Colaborador {
 	
 	public String visualizar()
 	{
-		return super.visualizar() + "\n Stack do Designer" + this.stackDesigner
+		return super.visualizar() + "\n Stack do Designer" + this.stack
 				+ "\n Tipo sanguíneo" + this.sanguineo;
 		
 	}

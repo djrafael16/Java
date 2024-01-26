@@ -2,17 +2,17 @@ package br.com.vainaweb.backendt3.DesafioModulo2;
 
 public class TechLeader extends Colaborador {
 
-	private String stackDesigner; 
+	; 
 	private String sanguineo; 
 	public TechLeader() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public TechLeader(String nome, String cpf, double salario,int tempo, String stackDesigner, String sanguineo) {
+	public TechLeader(String nome, String cpf, double salario,int tempo, String sanguineo) {
 		super(nome, cpf, salario, tempo);
 		this.sanguineo = sanguineo;
-		this.stackDesigner = stackDesigner;
+		
 	}
 
 	@Override
@@ -41,8 +41,8 @@ public class TechLeader extends Colaborador {
 	
 	public String visualizar()
 	{
-		return super.visualizar() + "\n Stack do Designer" + this.stackDesigner
-				+ "\n Tipo sanguíneo" + this.sanguineo;
+		return super.visualizar() + 
+				"\n Tipo sanguíneo" + this.sanguineo;
 		
 	}
     
