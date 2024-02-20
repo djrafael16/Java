@@ -1,5 +1,8 @@
 package DesafioNunbank;
 
-public class ContaPoupança {
+public interface ContaPoupança {
 
-}
+	public void SaquePoupanca();
+	
+	}
+
