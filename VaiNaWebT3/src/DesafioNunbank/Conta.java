@@ -1,6 +1,6 @@
 package DesafioNunbank;
 
-public class Conta {
+public abstract class Conta implements Operações {
 	
 	private String nome;
 	private String cpf;
@@ -16,8 +16,7 @@ public class Conta {
 	}
 	
 	public  Conta(String nome, String cpf, int numeroconta, byte agencia, int senha, double saldo) {
-		super();
-		this.nome = nome;
+	    this.nome = nome;
 		this.cpf = cpf;
 		this.numeroconta = numeroconta;
 		this.agencia = agencia;
@@ -79,6 +78,13 @@ public class Conta {
 				+ ", senha=" + senha + ", saldo=" + saldo + "]";
 	}
 	
+	public abstract void sacar();
+	
+	public abstract void transferir();
+	
+	public abstract void depositar();
+
+
 	
 
 }
