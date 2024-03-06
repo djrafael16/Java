@@ -49,12 +49,14 @@ public class AppNunbank {
             				System.out.println(conta);
             			//ContaCorrente contaCorrente = new ContaCorrente(nome, cpf, numeroconta, agencia,senha, saldo, credito);
             			//criarContaCorrente(contaCorrente);
-            			// confirma = true;
+            			confirma = true;
             			
             			
                         break;
                     case 2:
-                       
+                       for (Conta conta : contas)
+                    	   System.out.println(conta);
+                           confirma = true;
                         break;
                     case 3:
                     
