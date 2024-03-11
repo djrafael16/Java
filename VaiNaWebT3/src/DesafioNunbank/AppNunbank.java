@@ -3,6 +3,7 @@ package DesafioNunbank;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Stream;
 
 public class AppNunbank {
 
@@ -18,7 +19,7 @@ public class AppNunbank {
             System.out.println("\nMenu:");
             System.out.println("1. Criar Conta Corrente");
             System.out.println("2. Criar Conta Poupança");
-            System.out.println("3. Editar Conta");
+            System.out.println("3. Listar contas ");
             System.out.println("4. Buscar Conta pelo número");
             System.out.println("5. Excluir conta");
             System.out.println("6. Sair");
@@ -37,28 +38,37 @@ public class AppNunbank {
             			
                         break;
                     case 2:
-                    	
-            		
+                    	criarContaPopança();
+                    	System.out.println("conta criada");
+             			 confirma = true;
+             			
             			
             			confirma = true;
                         break;
                     case 3:
                     	 for (Conta conta : contas)
-                      	   System.out.println(conta);
+                    		 System.out.println(conta);
+                    	 if(contas.isEmpty())
+                    		 System.out.println("Sem conta cadastrada");
                     	
                              confirma = true;
                         break;
                     case 4:
                     	
+                    	buscarConta();
+                    	
+                    	confirma = true;
+                    	
                         break;    
                     case 5:
                     	
+                    	confirma = true;
                         break;    
                     
                     case 6:
                         System.out.println("Obrigado por usar os nossos serviços.");
-                        confirma = true;
-                        return;
+                        confirma = false;
+                         break;
                     default:
                         System.out.println("Opção inválida! Por favor, escolha uma opção válida.");
                 }
@@ -116,6 +126,13 @@ public class AppNunbank {
 			
 	    	contas.add(contaPoupança);
     	  
+      }
+      
+      public static void buscarConta() {
+    	    
+    	  contas.isEmpty();
+    	  System.out.println(contas);
+      	  
       }
 	
 	}
