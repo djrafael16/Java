@@ -20,7 +20,7 @@ public class AppNunbank {
             System.out.println("3. Editar Conta");
             System.out.println("4. Buscar Conta pelo número");
             System.out.println("5. Excluir conta");
-            System.out.println("5. Sair");
+            System.out.println("6. Sair");
             System.out.print("Escolha uma opção: ");
 
             try {
@@ -32,21 +32,20 @@ public class AppNunbank {
                     	String nome = sc.nextLine();
                     	System.out.print("Seu CPF ");
             			String cpf = sc.nextLine();
-            			System.out.print("Numero da conta");;
+            			System.out.print("Digite os 6 primeiros digitos do seu CPF");
             			int numeroconta  = sc.nextInt();
-            			System.out.print("Agencia ");
-            			byte agencia =sc.nextByte();
-            			System.out.print("Seua senha ");
+            			byte agencia = 00001;
+            			System.out.print("Seua senha de 6 digitos ");
             			int senha = sc.nextInt();
             			System.out.print("Seu deposito ");
             			double saldo = sc.nextDouble();
+            			double credito = saldo*0.05;
             			System.out.print("Seu credito e ");
-            			double credito = sc.nextDouble();
             			System.out.print("");
             			
             			contas.add(new ContaCorrente(nome, cpf, numeroconta, agencia,senha, saldo, credito));
-            			for(Conta conta : contas)
-            				System.out.println(conta);
+            			System.out.println("conta criada");
+            			
             			//ContaCorrente contaCorrente = new ContaCorrente(nome, cpf, numeroconta, agencia,senha, saldo, credito);
             			//criarContaCorrente(contaCorrente);
             			confirma = true;
@@ -54,12 +53,28 @@ public class AppNunbank {
             			
                         break;
                     case 2:
-                       for (Conta conta : contas)
-                    	   System.out.println(conta);
-                           confirma = true;
+                    	System.out.print("Seu nome");
+                    	String nomepop = sc.nextLine();
+                    	System.out.print("Seu CPF ");
+            			String cpfpop = sc.nextLine();
+            			System.out.print("Digite os 6 primeiros digitos do seu CPF");
+            			int numerocontapop  = sc.nextInt();
+            			byte agenciapop = 00001;
+            			System.out.print("Seua senha de 6 digitos ");
+            			int senhapop = sc.nextInt();
+            			System.out.print("Seu deposito ");
+            			double saldopop = sc.nextDouble();
+            			System.out.print("");
+            			
+            			contas.add(new ContaPoupança(nomepop, cpfpop, numerocontapop, agenciapop,senhapop, saldopop));
+            			System.out.println("conta criada");
+            			
+            			confirma = true;
                         break;
                     case 3:
-                    
+                    	 for (Conta conta : contas)
+                      	   System.out.println(conta);
+                             confirma = true;
                         break;
                     case 4:
                     	
@@ -85,25 +100,9 @@ public class AppNunbank {
 	
 
 
-	public static Conta criarContaCorrente(Conta conta)  throws Exception {
-		boolean cadastroSucesso = contas.add(conta);
-		if(cadastroSucesso) {
-			return conta;
-		} else {
-			throw new Exception("Erro ao cadastrar conta.");
-		}
-			
-		contas.forEach(contas -> contas.
-		
-		
-			
-		
-	 
-	
-	 
 	
 	
 	}
 
-}
+
 
