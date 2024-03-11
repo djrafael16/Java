@@ -22,8 +22,13 @@ public class ContaCorrente extends Conta {
 	
 	@Override
 	public String toString() {
-		return "Conta [nome=" + getNome() + ", cpf=" + getCpf() + ", numeroconta=" + getNumeroconta() + ", agencia=" + getAgencia()
-				+ ", senha=" + getSenha() + ", saldo=" + getSaldo() + "credito="+ credito;
+		return "Conta [nome = " + getNome() 
+		          + " cpf = " + getCpf() 
+		          + " numeroconta = " + getNumeroconta() 
+		          + " agencia = " + getAgencia()
+				  + " senha = " + getSenha() 
+				  + " saldo = " + getSaldo() 
+				  + "credito = "+ credito;
 	}
 
 	@Override
