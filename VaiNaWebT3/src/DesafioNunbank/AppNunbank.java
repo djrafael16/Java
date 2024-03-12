@@ -3,6 +3,7 @@ package DesafioNunbank;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class AppNunbank {
@@ -10,6 +11,7 @@ public class AppNunbank {
 	
 	static List<Conta> contas = new ArrayList<Conta>();
 	private static Scanner sc = new Scanner(System.in);
+
 	
 	public static void main(String[] args) throws Exception {
 		
@@ -31,7 +33,7 @@ public class AppNunbank {
                 switch (opcao) {
                     case 1:
                     	
-                    	criarContaCorrente();
+                    	criarContaCorrente(null);
             		    System.out.println("conta criada");
             			confirma = true;
             			
@@ -54,8 +56,13 @@ public class AppNunbank {
                              confirma = true;
                         break;
                     case 4:
+                    	System.out.println("Digite o numero da conta ");
+                    	int numero = sc.nextInt();
                     	
-                    	buscarConta();
+                        List<Conta> contaRetornada = contas.stream().filter(conta -> conta.getNumeroconta() == numero)
+                        		.collect(Collectors.toList());
+                    	System.out.println("Conta localizada");
+                    	System.out.println("Sua conta" + contaRetornada);
                     	
                     	confirma = true;
                     	
@@ -82,7 +89,7 @@ public class AppNunbank {
 
 
 	
-      public static void criarContaCorrente() {
+      public static ContaCorrente criarContaCorrente(ContaCorrente conta) {
     	  
     	    System.out.print("Seu nome");
         	String nome = sc.nextLine();
@@ -101,7 +108,7 @@ public class AppNunbank {
 			
     	ContaCorrente contaCorrente = new ContaCorrente(nome, cpf, numeroconta, agencia,senha, saldo, credito);
     	contas.add(contaCorrente);
-    	
+    	return conta;
 		
     	  
       }
@@ -128,13 +135,7 @@ public class AppNunbank {
     	  
       }
       
-      public static void buscarConta() {
-    	    
-    	  contas.isEmpty();
-    	  System.out.println(contas);
-      	  
-      }
-	
+    
 	}
 
 
