@@ -1,8 +1,15 @@
 package DesafioNunbank;
 
+import java.util.List;
+
+
+
+
 public class ContaCorrente extends Conta {
 	
+	
 	double credito;
+	
 
 	
 
@@ -10,7 +17,10 @@ public class ContaCorrente extends Conta {
 		super(nome, cpf, numeroconta, agencia, senha, saldo);
 		this.credito = credito;
 		
+		
 	}
+
+
 
 	public double getCredito() {
 		return credito;
@@ -20,6 +30,8 @@ public class ContaCorrente extends Conta {
 		this.credito = credito;
 	}
 	
+	
+
 	@Override
 	public String toString() {
 		return "Conta [nome = " + getNome() 
@@ -28,14 +40,19 @@ public class ContaCorrente extends Conta {
 		          + " agencia = " + getAgencia()
 				  + " senha = " + getSenha() 
 				  + " saldo = " + getSaldo() 
-				  + "credito = "+ credito;
+				  + "credito = " + credito;
 	}
 
+
+
 	@Override
-	public void sacar() {
+	public Conta sacar(double sacar) {
 		// TODO Auto-generated method stub
-		
+		setSaldo(getSaldo()-sacar);
+		return null;
 	}
+
+
 
 	@Override
 	public void transferir() {
@@ -43,12 +60,20 @@ public class ContaCorrente extends Conta {
 		
 	}
 
+
+
 	@Override
 	public void depositar() {
 		// TODO Auto-generated method stub
 		
 	}
 
+
+
+	
+
+
+	
 	
 	
 }

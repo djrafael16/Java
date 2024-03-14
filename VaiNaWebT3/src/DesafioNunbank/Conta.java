@@ -1,5 +1,7 @@
 package DesafioNunbank;
 
+import java.util.List;
+
 public abstract class Conta implements Operações {
 	
 	private String nome;
@@ -78,14 +80,5 @@ public abstract class Conta implements Operações {
 				+ ", senha=" + senha + ", saldo=" + saldo + "]";
 	}
 	
-	public abstract void sacar();
-	
-	public abstract void transferir();
-	
-	public abstract void depositar();
-
-
-	
-
 
 }

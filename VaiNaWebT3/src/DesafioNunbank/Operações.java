@@ -1,11 +1,15 @@
 package DesafioNunbank;
 
+import java.util.List;
+
 public interface Operações {
-	public void sacar();
+	public Conta sacar(double sacar);
 	
 	public void transferir();
 	
 	public void depositar();
+
+	
 	
 
 }

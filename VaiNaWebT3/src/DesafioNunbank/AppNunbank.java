@@ -13,6 +13,7 @@ public class AppNunbank {
 	private static Scanner sc = new Scanner(System.in);
 
 	
+	@SuppressWarnings("unused")
 	public static void main(String[] args) throws Exception {
 		
 		int opcao;
@@ -22,8 +23,8 @@ public class AppNunbank {
             System.out.println("1. Criar Conta Corrente");
             System.out.println("2. Criar Conta Poupança");
             System.out.println("3. Listar contas ");
-            System.out.println("4. Buscar Conta pelo número");
-            System.out.println("5. Excluir conta");
+            System.out.println("4. Buscar Conta / Saque / Deposito / Transferencia");
+            System.out.println("5. excluir conta ");
             System.out.println("6. Sair");
             System.out.print("Escolha uma opção: ");
 
@@ -56,18 +57,13 @@ public class AppNunbank {
                              confirma = true;
                         break;
                     case 4:
-                    	System.out.println("Digite o numero da conta ");
-                    	int numero = sc.nextInt();
                     	
-                        List<Conta> contaRetornada = contas.stream().filter(conta -> conta.getNumeroconta() == numero)
-                        		.collect(Collectors.toList());
-                    	System.out.println("Conta localizada");
-                    	System.out.println("Sua conta" + contaRetornada);
-                    	
+                    	buscarConta();
+                        
                     	confirma = true;
-                    	
-                        break;    
+                        break; 
                     case 5:
+                    	 
                     	
                     	confirma = true;
                         break;    
@@ -78,6 +74,7 @@ public class AppNunbank {
                          break;
                     default:
                         System.out.println("Opção inválida! Por favor, escolha uma opção válida.");
+                        confirma = false;
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Por favor, digite um número válido!");
@@ -89,7 +86,7 @@ public class AppNunbank {
 
 
 	
-      public static ContaCorrente criarContaCorrente(ContaCorrente conta) {
+      public static Conta criarContaCorrente(Conta conta) {
     	  
     	    System.out.print("Seu nome");
         	String nome = sc.nextLine();
@@ -103,10 +100,11 @@ public class AppNunbank {
 			System.out.print("Seu deposito ");
 			double saldo = sc.nextDouble();
 			double credito = saldo*1.05;
+			
 			System.out.print("Seu credito e ");
 			System.out.print("");
 			
-    	ContaCorrente contaCorrente = new ContaCorrente(nome, cpf, numeroconta, agencia,senha, saldo, credito);
+    	Conta contaCorrente = new ContaCorrente(nome, cpf, numeroconta, agencia,senha, saldo, credito);
     	contas.add(contaCorrente);
     	return conta;
 		
@@ -134,9 +132,39 @@ public class AppNunbank {
 	    	contas.add(contaPoupança);
     	  
       }
+     
+  
+      public static void buscarConta()
+      {
+    	  for(Conta conta : contas)
+      	{
+      	System.out.println("Digite o numero da conta ");
+      	int numero = sc.nextInt();
+      	
+           Conta contaRetornada = contas.stream().filter(c -> conta.getNumeroconta() == numero).findFirst()
+          		.orElse(null);
+           
+           System.out.println("Sua conta" + contaRetornada.toString());
+          
+      	
+      	System.out.println("Digite o valor para saque");
+      	double sacar = sc.nextInt();
+      	
+      	contaRetornada.sacar(sacar);
+      	
+      	System.out.println(conta);;
+      	
+      	}
+      	
+      }
+      
+	} 
+
+
+
       
     
-	}
+	
 
 
 
